@@ -1,4 +1,4 @@
-
+no
 # Adding Custom Actions
 ```
   <DataGridTemplateColumn Header="Actions" IsReadOnly="True" Width="Auto">
@@ -74,15 +74,48 @@ timer.Tick += (s, e) =>
 timer.Start();
 ```
 
-I hope this helps you with your WPF application. 😊
+# Creating a marker
 
-Source: Conversation with Bing, 9/18/2023
-(1) c# - How do I create a timer in WPF? - Stack Overflow. https://stackoverflow.com/questions/11559999/how-do-i-create-a-timer-in-wpf.
-(2) c# - How to make a wpf countdown timer? - Stack Overflow. https://stackoverflow.com/questions/16748371/how-to-make-a-wpf-countdown-timer.
-(3) Timer In WPF - C# Corner. https://www.c-sharpcorner.com/uploadfile/mahesh/timer-in-wpf/.
-(4) vb.net - Making a timer in WPF - Stack Overflow. https://stackoverflow.com/questions/6644989/making-a-timer-in-wpf.
-(5) undefined. http://schemas.microsoft.com/winfx/2006/xaml/presentation.
-(6) undefined. http://schemas.microsoft.com/winfx/2006/xaml.
-(7) wpf - How I can set DispatcherTimer into the for loop - Stack Overflow. https://stackoverflow.com/questions/4544147/how-i-can-set-dispatchertimer-into-the-for-loop.
-(8) c# - DispatcherTimer waiting in for loop - Stack Overflow. https://stackoverflow.com/questions/24075350/dispatchertimer-waiting-in-for-loop.
-(9) DispatcherTimer in WPF - C# Corner. https://www.c-sharpcorner.com/blogs/dispatchertimer-in-wpf.
+Sure, I can provide you with some code for creating a WPF marker using GMap. Here is one possible way to do it:
+
+```CS
+// Create a new instance of GMapMarker with a PointLatLng object as its parameter
+GMapMarker marker = new GMapMarker(new PointLatLng(35.6960617168288, 51.4005661010742));
+
+// Set the Shape property of the marker to a new instance of Image
+marker.Shape = new Image
+{
+    Width = 10,
+    Height = 10,
+    Source = new BitmapImage(new System.Uri("pack://application:,,,/assets/marker.png"))
+};
+
+// Add the marker to the GMap control's Markers collection
+gmap.Markers.Add(marker);
+```
+
+This code will create a marker with a custom image and add it to the map at the specified location. You can change the image source and the coordinates as you wish. For more information, you can refer to [this question](^1^) or [this question](^3^) on Stack Overflow. 
+
+# creating marker
+
+// Declare a global variable to store the current marker
+GMapMarker currentMarker = null;
+
+// Create a function that takes a coordinate as a parameter
+void CreateMarker(PointLatLng coordinate)
+{
+    // Check if there is an existing marker
+    if (currentMarker != null)
+    {
+        // Remove the existing marker from the overlay
+        markersOverlay.Markers.Remove(currentMarker);
+    }
+
+    // Create a new marker with the given coordinate
+    currentMarker = new GMarkerGoogle(coordinate, GMarkerGoogleType.green);
+
+    // Add the new marker to the overlay
+    markersOverlay.Markers.Add(currentMarker);
+}
+
+
