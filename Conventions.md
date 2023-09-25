@@ -117,3 +117,20 @@ There are actuall three ways to fill a column.
 2. Automated (Identity)
 3. Computed (based on other columns says fullname based on first_name or last_name)
 
+## objectives
+
+
+Sure, here are some possible one liner SMART goals or objectives for a desktop developer:
+
+- Develop and deploy a new feature for our desktop application that enhances the user experience and increases the customer satisfaction by the end of Q2.
+- Improve the performance and security of our desktop application by implementing code optimization and encryption techniques by the end of Q3.
+- Learn and apply a new programming language or framework that is relevant to our desktop application development by the end of Q4.
+- Resolve at least 90% of the reported bugs and issues of our desktop application within the agreed SLA by the end of Q1.
+- Conduct regular code reviews and provide constructive feedback to other desktop developers to ensure the code quality and consistency by the end of Q2.
+- Create and update the technical documentation and user manuals of our desktop application to reflect the latest changes and features by the end of Q3.
+- Design and execute comprehensive test cases and scenarios for our desktop application to ensure its functionality, usability, and reliability by the end of Q4.
+- Mentor and coach a junior desktop developer to help them improve their skills and knowledge by the end of Q1.
+- Participate in at least two professional development events or webinars related to desktop application development by the end of Q2.
+- Seek feedback from the users and stakeholders of our desktop application and incorporate their suggestions and requirements into the development process by the end of Q3.
+
+You can choose any of these goals or objectives that suit your role, responsibilities, and interests. You can also modify them to make them more specific, measurable, achievable, relevant, and time-bound. I hope this helps. 😊
